@@ -2,11 +2,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-class Advent14 {
+class Advent13 {
 
     public static void main(String args[]) throws FileNotFoundException {
        
-        File txt = new File("advent2021-14.txt");
+        File txt = new File("advent2021-13.txt");
         Scanner reader = new Scanner(txt);
 
         String rawPos[] = reader.nextLine().split(",");
@@ -39,7 +39,6 @@ class Advent14 {
 
     public static int moveCrab(int pos, int dest) {
 
-        int dist = Math.abs(pos - dest);
-        return ((dist * dist) + dist) / 2;
+        return Math.abs(pos - dest);
     }
 }
